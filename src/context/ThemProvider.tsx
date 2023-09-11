@@ -11,15 +11,15 @@ export const useThemeToggle = () => {
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || savedTheme === 'light') { // Ensure lowercase comparison
+        if (savedTheme === 'dark' || savedTheme === 'light') { 
             setTheme(savedTheme);
         } else {
-            setTheme('light'); // Set a default theme if none is found in local storage
+            setTheme(theme); 
         }
     }, []);
 
     useEffect(() => {
-        localStorage.setItem('theme', theme); // Use the lowercase theme value
+        localStorage.setItem('theme', theme); 
     }, [theme]);
 
     return { theme, toggleTheme };

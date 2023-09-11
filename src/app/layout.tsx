@@ -3,11 +3,9 @@ import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Dark, Light } from '@/utils/Variables';
 import NavigatioBar from '@/components/NavigationBar';
-import { Inter } from 'next/font/google';
-import { useThemeToggle } from '@/context/ThemProvider';
+import { useThemeToggle } from '@/context/ThemProvider'; // Assuming this is the correct import path
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
-
 
 export const metadata: Metadata = {
   title: 'Meborny',
@@ -20,10 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const { theme } = useThemeToggle();
+  // const theme = localStorage.getItem('theme') ?? 'dark'
+
 
   return (
     <html lang="en">
-      <body style={{margin:'0px'}}>
+      <body style={{ margin: '0px' }}>
         <ThemeProvider theme={theme === 'dark' ? { ...Dark } : { ...Light }}>
           <NavigatioBar />
           {children}

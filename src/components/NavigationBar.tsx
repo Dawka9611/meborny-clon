@@ -115,11 +115,8 @@ const NavigationStyle = styled.div`
     justify-content:center;
     align-items:center;
     &:hover {
-        scale: 1.02;
+    
     }
-    /* svg {
-        font-size:18px;
-    } */
 }
 `;
 

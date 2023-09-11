@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 export default function Home() {
-  const aspectRatio = 1200 / 500;
   return (
     <PageStyle className="flex flex-col items-center justify-between p-0 m-0">
       <div className='imageContainer m-10 w-full relative'>
